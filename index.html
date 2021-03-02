@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zuingo - js-pwdgen-wannabe</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 750px;
+            height: 200px;
+            margin: auto;
+            color: white;
+            background-color: teal;
+            border: solid 2px black;
+            border-radius: 20px;
+            overflow: auto;
+        }
+
+        #pi {
+            transition: all 0.5s;
+        }
+
+        #pi:hover {
+            scale: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 id="titolo">ciao mondo</h1>
+        <p id="pi">tanti saluti</p>
+    </div>
+
+    <script>
+        //
+        var nome = prompt('Quale è il tuo nome?');
+        var cognome = prompt("Quale è il tuo cognome?");
+        var colore = prompt("Quale è il tuo colore preferito?");
+        var eta = prompt('Quanti anni hai?')
+        var risultato = nome + cognome + colore + eta;
+
+        console.log('Nome: ' + nome,'Cognome: ' + cognome,'Colore preferito: ' + colore,'Età: ' + eta, risultato);
+
+        document.getElementById('titolo').innerHTML = risultato;
+        document.getElementById('pi').innerHTML = 'molto interessante';
+    </script>
+</body>
+
+</html>
